@@ -9,7 +9,8 @@ import {
     Output,
     EventEmitter,
     HostListener,
-} from '@angular/core';
+}
+from '@angular/core';
 
 import { Observable } from 'rxjs/Observable';
 import { Subscription } from 'rxjs/Subscription';
