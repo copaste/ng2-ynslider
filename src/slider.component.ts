@@ -45,7 +45,7 @@ export class YnSliderComponent implements OnInit, AfterContentInit, OnDestroy {
     public slideAnimation: boolean = true;
 
     private sliderElement: HTMLElement;
-    private slides: WotdSliderSlideComponent[] = [];
+    private slides: YnSliderSlideComponent[] = [];
     private currentSlideIndex: number = this.initialSlide;
     private sliderWidth: number = 0;
 
@@ -167,7 +167,7 @@ export class YnSliderComponent implements OnInit, AfterContentInit, OnDestroy {
         return this.currentSlideIndex;
     }
 
-    public addSlide(slide: WotdSliderSlideComponent): void {
+    public addSlide(slide: YnSliderSlideComponent): void {
         slide.index = this.slides.length;
         this.slides = this.slides.concat([slide]);
         if (this.slides.length === 1 || this.initialSlide === slide.index) {
