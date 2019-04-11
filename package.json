@@ -1,17 +1,12 @@
 {
   "name": "ng2-ynslider",
-  "version": "0.0.3",
-  "description": "Simple slider.",
+  "version": "1.0.0",
+  "description": "Simple carousel slider.",
   "license": "MIT",
-  "readmeFilename": "README.md",
-  "private": true,
-  "author": {
-    "name": "Yordan Nikolov",
-    "email": "copasten@gmail.com"
-  },
+  "author": "Yordan Nikolov <copasten@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/copaste/ng2-ynslider"
+    "url": "git+https://github.com/copaste/ng2-ynslider.git"
   },
   "bugs": {
     "url": "https://github.com/copaste/ng2-ynslider/issues"
@@ -24,40 +19,50 @@
     "angular2-slider",
     "angular2-carousel"
   ],
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "test": "ng test",
+    "lint": "ng lint",
+    "e2e": "ng e2e",
+    "packagr": "ng-packagr -p ng-package.json"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/common": "~7.2.0",
+    "@angular/compiler": "~7.2.0",
+    "@angular/core": "~7.2.0",
+    "@angular/platform-browser": "~7.2.0",
+    "@angular/platform-browser-dynamic": "~7.2.0",
+    "rxjs": "~6.3.3",
+    "tslib": "^1.9.0",
+    "zone.js": "~0.8.26"
+  },
   "peerDependencies": {
-    "@angular/core": "^4.2.2"
+    "@angular/common": "~7.2.0"
   },
   "devDependencies": {
-    "@angular/common": "^4.2.2",
-    "@angular/compiler": "^4.2.2",
-    "@angular/compiler-cli": "^4.2.2",
-    "@angular/core": "^4.2.2",
-    "@angular/platform-browser": "^4.2.2",
-    "@angular/platform-browser-dynamic": "^4.2.2",
-
-    "@types/node": "^7.0.0",
-    "chai": "^3.4.1",
-    "del": "^2.2.2",
-    "es6-shim": "^0.35.2",
-    "gulp": "^3.9.0",
-    "gulp-file": "^0.3.0",
-    "gulp-mocha": "^3.0.1",
-    "gulp-rename": "^1.2.2",
-    "gulp-replace": "^0.5.4",
-    "gulp-shell": "^0.5.1",
-    "gulp-tslint": "^7.0.1",
-    "gulp-typescript": "^3.1.4",
-    "gulp-uglify": "^2.0.0",
-    "gulpclass": "^0.1.1",
-    "mocha": "^3.2.0",
-    "reflect-metadata": "0.1.9",
-    "rxjs": "^5.0.3",
-    "sinon": "^1.17.7",
-    "sinon-chai": "^2.8.0",
-    "systemjs": "0.19.42",
-    "tslint": "^4.3.1",
-    "tslint-stylish": "^2.1.0-beta",
-    "typescript": "^2.1.5",
-    "zone.js": "^0.7.6"
+    "@angular-devkit/build-angular": "~0.13.0",
+    "@angular/cli": "~7.3.5",
+    "@angular/compiler-cli": "~7.2.0",
+    "@angular/language-service": "~7.2.0",
+    "@types/jasmine": "~2.8.8",
+    "@types/jasminewd2": "~2.0.3",
+    "@types/node": "~8.9.4",
+    "codelyzer": "~4.5.0",
+    "jasmine-core": "~2.99.1",
+    "jasmine-spec-reporter": "~4.2.1",
+    "karma": "~4.0.0",
+    "karma-chrome-launcher": "~2.2.0",
+    "karma-coverage-istanbul-reporter": "~2.0.1",
+    "karma-jasmine": "~1.1.2",
+    "karma-jasmine-html-reporter": "^0.2.2",
+    "ng-packagr": "^4.7.1",
+    "protractor": "~5.4.0",
+    "ts-node": "~7.0.0",
+    "tsickle": "^0.34.3",
+    "tslint": "~5.11.0",
+    "typescript": "~3.2.2"
   }
 }

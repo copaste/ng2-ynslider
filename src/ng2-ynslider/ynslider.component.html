@@ -1,0 +1,24 @@
+<div class="carousel-slider">
+    <button *ngIf="navigation" (click)="slidePrev()" [disabled]="currentSlideIndex === 0" type="button" aria-label="Previous" class="carousel-nav-btn prev">
+        <i class="arrow_carrot-left"></i>
+    </button>
+    <button *ngIf="navigation" (click)="slideNext()" [disabled]="currentSlideIndex === slides.length - 1" type="button" aria-label="Next" class="carousel-nav-btn next">
+        <i class="arrow_carrot-right"></i>
+    </button>
+    <div class="carousel-slides">
+        <div class="slider-inner"
+             [style.transform]="'translate3d(' + (translateX || 0) + '%, 0, 0)'"
+             [style.width.px]="sliderInnerWidth"
+             [class.animating]="slideAnimation"
+        >
+            <ng-content></ng-content>
+        </div>
+    </div>
+    <ul class="slider-pager" *ngIf="pager">
+        <li class="slider-pager-page"
+            *ngFor="let slide of slides; let i = index"
+            (click)="slideTo(i)"
+            [class.active]="currentSlideIndex === i"
+        >{{i}}</li>
+    </ul>
+</div>
