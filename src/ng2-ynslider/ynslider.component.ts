@@ -47,9 +47,9 @@ export class YnSliderComponent implements OnInit, OnDestroy, AfterContentInit {
 
     public opt = {
         height: 360,
-        slidesToShow: 2,
+        slidesToShow: 1,
         slidesToScroll: 1,
-        autoPlay: true,
+        autoPlay: false,
         interval: 5000,
         activeSlideIndex: 0,
         partialMode: true,
