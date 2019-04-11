@@ -38,7 +38,7 @@ First is a `yn-slider`:
 * `initialSlide` - Start from specific slide
 * `pager` - Show/Hide the dotted pager
 * `(slideDidChange)` - event emitted when slide changed
-
+* `options` - Additional options
 ## Sample
 
 Using simple yn-slider:
@@ -56,6 +56,7 @@ import { YnSliderModule } from 'ng2-ynslider';
             [initialSlide]="0"
             [pager]="false"
             [speed]="3000"
+            [options]="ynOpt"
             (slideDidChange)="someActionOnChange()"
         >
             <yn-slider-slide *ngFor="let img of images; let i = index;">
@@ -69,6 +70,15 @@ import { YnSliderModule } from 'ng2-ynslider';
     `
 })
 export class App {
+    ynOpt = {
+        height: 360,
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        autoPlay: true,
+        interval: 5000,
+        activeSlideIndex: 0,
+        partialMode: true,
+    };
 }
 
 @NgModule({
