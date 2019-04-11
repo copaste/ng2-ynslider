@@ -27,7 +27,11 @@ export class YnSliderSlideComponent implements OnInit, OnDestroy, AfterContentIn
     @HostBinding('class.active')
     public active = false;
     @HostBinding('style.width.px')
-    public width = 0;
+    public get width() {
+      //  const slideWidth = this.sliderComp.sliderWidth / this.sliderComp.opt.slidesToShow;
+        const partialSize = this.sliderComp.opt.partialMode ? (this.sliderComp.sliderWidth * 0.05) : 0;
+        return (this.sliderComp.sliderWidth - partialSize) / this.sliderComp.opt.slidesToShow ;
+    }
 
     constructor(
         private sliderComp: YnSliderComponent,
@@ -38,9 +42,6 @@ export class YnSliderSlideComponent implements OnInit, OnDestroy, AfterContentIn
     }
 
     public ngAfterContentInit() {
-        //  const slideWidth = this.sliderComp.sliderWidth / this.sliderComp.opt.slidesToShow;
-        const partialSize = this.sliderComp.opt.partialMode ? (this.sliderComp.sliderWidth * 0.05) : 0;
-        this.width = (this.sliderComp.sliderWidth - partialSize) / this.sliderComp.opt.slidesToShow ;
     }
 
     public ngOnDestroy() {
