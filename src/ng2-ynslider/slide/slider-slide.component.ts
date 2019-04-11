@@ -28,10 +28,17 @@ export class YnSliderSlideComponent implements OnInit, OnDestroy, AfterContentIn
     public active = false;
     @HostBinding('style.width.px')
     public get width() {
+        if (this.cache[this.sliderComp.sliderWidth]) {
+            return this.cache[this.sliderComp.sliderWidth];
+        }
+
       //  const slideWidth = this.sliderComp.sliderWidth / this.sliderComp.opt.slidesToShow;
         const partialSize = this.sliderComp.opt.partialMode ? (this.sliderComp.sliderWidth * 0.05) : 0;
-        return (this.sliderComp.sliderWidth - partialSize) / this.sliderComp.opt.slidesToShow ;
+        return this.cache[this.sliderComp.sliderWidth] =
+            (this.sliderComp.sliderWidth - partialSize) / this.sliderComp.opt.slidesToShow ;
     }
+
+    private cache = [];
 
     constructor(
         private sliderComp: YnSliderComponent,
